@@ -1,52 +1,209 @@
-# Social Media-Driven Pump-and-Dump Detection Framework
+# 📈 Social Media-Driven Pump-and-Dump Detection Framework
+
 ## Capital Markets Fraud Analytics Portfolio Project
 
-### Project Overview
-A data-driven financial crime analytics framework investigating social media-driven market manipulation in the Indian stock market. Using data from SEBI enforcement actions, this project runs an **Event Study Analysis** on an SME scrip (**Afcom Holdings Ltd**) to quantify how coordinated Telegram alerts induce artificial retail liquidity, leading to rapid asset crashes.
+### Dashboard Preview
 
-* **Compliance Scope:** SEBI PFUTP Regulations & Bharatiya Nyaya Sanhita (BNS) Sec. 318(4)
-
----
-
-### Key Fraud Metrics
-
-| Investigative Parameter | Analytical Value | Operational Significance |
-| :--- | :--- | :--- |
-| **Total Illicit Gains Confiscated** | ₹20.25 Crore | Disgorgement value impounded from 7 operators |
-| **Manipulated Ecosystem** | 82 Scrips | Multi-account mule network distribution scale |
-| **Pre-Promotion Base Volume** | 10,500 Shares/day | Historical baseline liquidity ($T-3$ to $T-1$) |
-| **Peak Manipulation Volume** | 310,000 Shares | Induced volume spike at the $T+2$ execution window |
-| **Calculated Volume Delta** | **+2,852%** | Statistical anomaly flagging market manipulation |
-| **Retail Capital Haircut** | **62.5% Loss** | Peak-to-crash price delta (₹80 to ₹30) |
-
----
-
-### Event Study Timeline (Afcom Holdings Ltd)
-* **T−3 to T−1 (26-Jul to 28-Jul) | Accumulation:** Operators quietly buy shares under deep information asymmetry. Price stable at ₹45; volume at a 10,500 base.
-* **T (29-Jul) | Pump Phase:** Coordinated stock tips drop across public Telegram channels. Volume jumps to 180,000; price hits ₹65.
-* **T+1 (30-Jul) | Retail FOMO:** Induced retail buying drives price to its peak of **₹80** on a 250,000 volume.
-* **T+2 (31-Jul) | Dump Phase:** Admins post *"Today try to sell Afcom"*. Operators execute contrary positions, dumping shares into retail buy queues at peak volume (**310,000 shares**).
-* **T+3 (01-Aug) | Crash / Liquidity Vacuum:** Volumes dry up (45,000). Stock hits consecutive lower circuits, crashing to **₹30** and locking retail capital into a **62.5% trap**.
-
----
-
-### Visual Analytics Preview
 ![Excel Fraud Analytics Dashboard](excel_dashboard_preview.png)
 
+---
+
+## Project Overview
+
+A data-driven financial crime analytics framework investigating social media-driven market manipulation in the Indian stock market. Using data from SEBI enforcement actions, this project performs an **Event Study Analysis** on an SME stock (**Afcom Holdings Ltd**) to quantify how coordinated Telegram-based stock recommendations create artificial retail demand, inflate prices, and ultimately result in substantial investor losses.
+
+**Compliance Scope:** SEBI PFUTP Regulations, SEBI Investment Advisers Regulations & Bharatiya Nyaya Sanhita (BNS) Sec. 318(4)
 
 ---
 
-### Proactive Surveillance Framework
-1. **Alternative Data Sourcing:** Automated web scrapers target Telegram/WhatsApp APIs. **Natural Language Processing (NLP)** flags high-risk financial triggers (*"upper circuit guaranteed"*, *"jackpot share"*).
-2. **Cross-Correlative Engine:** Matches text timestamps with live order books. Jumps in volume delta exceeding **$+500\%$ within a 15-minute window** of a social broadcast trigger automated forensic alerts.
-3. **SME Sentinel Protocols:** Implements volume-weighted dynamic circuit breakers on low-float stocks to block mass contrary-position dumping into brief artificial liquidity windows.
+## Key Fraud Metrics
+
+| Investigative Parameter   | Analytical Value |
+| ------------------------- | ---------------- |
+| Total Illegal Gains       | ₹20.25 Crore     |
+| Stocks Manipulated        | 82               |
+| Operators Involved        | 7                |
+| Pre-Promotion Volume      | 10,500 Shares    |
+| Peak Trading Volume       | 310,000 Shares   |
+| Trading Activity Increase | 2,852%           |
+| Retail Investor Loss      | 62.5%            |
 
 ---
 
-### Repository Structure
-* `/data/raw/`: Original SEBI macro metrics and case parameters.
-* `/data/processed/`: Contains `sebi_fraud_event_study.xlsx` with cleaned mathematical workflows.
-* `/dashboard/`: High-resolution screenshots of the trade lifecycle analytics.
-* `/presentation/`: The final investigation slide deck: `pump_and_dump_investigation_deck.pptx`.
+## Event Study Timeline (Afcom Holdings Ltd)
 
-**Keywords:** *Fraud Analytics, Market Surveillance, Event Study, SEBI PFUTP, Order Book Anomalies, Asset Disgorgement, Induced Liquidity.*
+### T−3 to T−1 | Accumulation Phase
+
+Operators quietly accumulate shares while prices remain stable and market attention is low.
+
+* Price: ₹45
+* Avg Volume: 10,500 Shares
+
+### T | Promotion Phase
+
+Stock recommendations are aggressively circulated across Telegram channels and social media groups.
+
+* Price: ₹65
+* Volume: 180,000 Shares
+
+### T+1 | Retail FOMO Phase
+
+Retail investors enter the market following viral stock recommendations.
+
+* Price Peaks: ₹80
+* Volume: 250,000 Shares
+
+### T+2 | Dump Phase
+
+Operators begin selling shares at inflated prices while retail investors continue buying.
+
+* Peak Volume: 310,000 Shares
+
+### T+3 | Crash Phase
+
+Artificial demand disappears and prices collapse.
+
+* Price Falls: ₹80 → ₹30
+* Investor Loss: 62.5%
+
+---
+
+## Dashboard Highlights
+
+### KPI Monitoring
+
+Tracks key fraud indicators including:
+
+* Illegal gains
+* Manipulated stocks
+* Operator count
+* Trading activity growth
+
+### Event Study Analysis
+
+Visualizes abnormal trading activity before and after social media promotions.
+
+### Trading Volume Analysis
+
+Identifies sudden liquidity spikes associated with coordinated stock recommendations.
+
+### Retail Loss Analysis
+
+Measures the financial impact on investors following the price collapse.
+
+### Fraud Detection Indicators
+
+Highlights unusual patterns that may signal market manipulation.
+
+---
+
+## Case Studies Included
+
+### Hemant Gupta Finfluencer Family Scam
+
+SEBI investigated a network of seven individuals accused of manipulating multiple SME and small-cap stocks through social media recommendations.
+
+**Key Findings**
+
+* 82 Stocks Manipulated
+* ₹20.25 Crore Illegal Gains
+* Coordinated Promotion Campaigns
+* Retail Investor Targeting
+
+### Rajneesh Kumar vs SEBI
+
+A landmark case demonstrating how Telegram channels can be used to generate artificial demand and influence stock prices.
+
+---
+
+## Analytical Methodology
+
+### Event Study Analysis
+
+Measures stock price and trading volume movements surrounding major social media recommendation events.
+
+### Volume Variance Analysis
+
+Quantifies abnormal changes in trading activity after promotional campaigns.
+
+### Retail Loss Assessment
+
+Calculates investor losses resulting from post-promotion price crashes.
+
+### Data Visualization
+
+Transforms complex fraud indicators into actionable dashboard insights.
+
+---
+
+## Proposed Innovative Solutions
+
+### 🧬 Investor DNA Profile System
+
+A personalized investor protection mechanism that analyzes trading history, investment behavior, and risk appetite. When a user attempts to purchase a stock experiencing abnormal social media hype and outside their normal investment profile, the system generates a risk alert before order execution.
+
+**Expected Impact**
+
+* Reduces impulsive investments
+* Protects retail investors
+* Promotes informed decision-making
+
+### 🚦 Viral Stock Circuit Breaker
+
+A market surveillance mechanism that temporarily flags or pauses trading in stocks experiencing excessive social media virality. The system monitors abnormal increases in mentions, shares, comments, and engagement alongside traditional price and volume indicators.
+
+**Expected Impact**
+
+* Early fraud detection
+* Prevention of artificial demand
+* Enhanced market transparency
+
+---
+
+## Technology Stack
+
+* Microsoft Excel
+* Financial Crime Analytics
+* Event Study Methodology
+* Data Visualization
+* Capital Markets Research
+
+---
+
+## Repository Structure
+
+```text
+data/
+├── raw/
+├── processed/
+│   └── sebi_fraud_event_study.xlsx
+
+dashboard/
+└── excel_dashboard_preview.png
+
+presentation/
+└── pump_and_dump_investigation_deck.pptx
+
+README.md
+```
+
+---
+
+## Key Skills Demonstrated
+
+* Financial Crime Analytics
+* Capital Markets Research
+* Fraud Detection
+* Event Study Analysis
+* Regulatory Compliance Analysis
+* Data Visualization
+* Excel Dashboard Development
+* Market Surveillance Analytics
+
+---
+
+## Author
+
+**Ancilla Dsouza**
+
+Financial Crime Analytics | Capital Markets | Data Analytics | FinTech
