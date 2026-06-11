@@ -4,7 +4,7 @@
 
 ### Dashboard Preview
 
-![Excel Fraud Analytics Dashboard](excel_dashboard_preview.png)
+![Excel Fraud Analytics Dashboard](excel_dashboard_preview.png.png)
 
 ---
 
