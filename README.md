@@ -31,7 +31,8 @@ A data-driven financial crime analytics framework investigating social media-dri
 ---
 
 ### Visual Analytics Preview
-![Excel Fraud Analytics Dashboard](dashboard/excel_dashboard_preview.png.png)
+![Excel Fraud Analytics Dashboard](excel_dashboard_preview.png)
+
 
 ---
 
